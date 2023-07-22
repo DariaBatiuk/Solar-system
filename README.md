@@ -1,5 +1,4 @@
 # solar-system
 
 three.js solar system
-
-![](demo_gif.gif)
+![alt](demo_gif.gif)
