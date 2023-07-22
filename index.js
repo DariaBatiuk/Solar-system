@@ -97,3 +97,11 @@ const pointLight = new THREE.PointLight (0xffffff, 1);
 pointLight.position.set(0, 0, 0);
 
 scene.add(ambientLight, pointLight);
+
+const animate = () => {
+	renderer.render(scene, camera);
+
+	requestAnimationFrame(animate);
+};
+
+animate();
