@@ -28,3 +28,17 @@ const starsMaterial = new THREE.PointsMaterial({ color: 0xaaaaaa });
 const stars = new THREE.Points(starsGeometry, starsMaterial);
 
 scene.add(stars);
+
+class ObjectGroup {
+	static createObject = (title, objectGeometry) => {
+		const objectTexture = new THREE.Textureloader().load(`textures/${title}.jpg`);
+		const objectMaterial = new THREE.Mesh.PhongMaterial({ map: objectTexture});
+		const objectMesh = new THREE.Mesh(objectGeometry, objectMaterial);
+
+		return objectMesh;
+	};
+}
+
+const sun = ObjectGroup.createObject(OBJECTS.SUN, new THREE.SphereGeometry(11, 64, 32));
+scene.add(sun);
+
