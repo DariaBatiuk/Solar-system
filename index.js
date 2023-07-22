@@ -90,5 +90,10 @@ planetsMap.get(OBJECT.SATURN).rotation.y += EARTH_YEAR * 8;
 planetsMap.get(OBJECT.URANUS).rotation.y += EARTH_YEAR * 16;
 planetsMap.get(OBJECT.NEPTUNE).rotation.y += EARTH_YEAR * 32;
 
+//adding light
+const ambientLight = new THREE.AmbientLight(0xaaaaaa, 1);
+const pointLight = new THREE.PointLight (0xffffff, 1);
 
+pointLight.position.set(0, 0, 0);
 
+scene.add(ambientLight, pointLight);
